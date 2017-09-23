@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 VenomRom Project
+ * Copyright (C) 2018 The Superior OS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.venom.settings.fragments;
+package com.superior.settings.fragments;
 
 import com.android.internal.logging.nano.MetricsProto;
 
@@ -39,10 +39,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.venom.settings.R;
+import com.superior.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.venom.settings.preferences.Utils;
+import com.superior.settings.preferences.Utils;
 
 public class LockscreenSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -54,16 +54,16 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
     private SwitchPreference mFaceUnlock;
-
+	
      @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.venom_settings_lockscreen);
-
+        addPreferencesFromResource(R.xml.superior_settings_lockscreen);
+		
        ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
         Resources resources = getResources();
-
+		
 		mFaceUnlock = (SwitchPreference) findPreference(KEY_FACE_AUTO_UNLOCK);
         if (!Utils.isPackageInstalled(getActivity(), KEY_FACE_UNLOCK_PACKAGE)){
             prefScreen.removePreference(mFaceUnlock);
@@ -86,7 +86,7 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-
+		
         if (preference == mFaceUnlock) {
             boolean value = (Boolean) newValue;
             Settings.Secure.putInt(getActivity().getContentResolver(),
@@ -100,11 +100,11 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements
         }
         return false;
     }
-
+	
 
    @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.VENOM;
+        return MetricsProto.MetricsEvent.SUPERIOR;
     }
-
+	
  }
