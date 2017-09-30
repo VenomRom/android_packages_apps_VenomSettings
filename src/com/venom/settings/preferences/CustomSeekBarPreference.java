@@ -55,6 +55,9 @@ public class CustomSeekBarPreference extends Preference implements SeekBar.OnSee
         mMax = attrs.getAttributeIntValue(ANDROIDNS, "max", 100);
         mMin = attrs.getAttributeIntValue(SETTINGS_NS, "min", 0);
         mDefaultValue = attrs.getAttributeIntValue(ANDROIDNS, "defaultValue", -1);
+        if (mDefaultValue > mMax) {
+            mDefaultValue = mMax;
+        }
         mUnits = getAttributeStringValue(attrs, SETTINGS_NS, "units", "");
         mDefaultText = getAttributeStringValue(attrs, SETTINGS_NS, "defaultText", "Def");
 
@@ -135,7 +138,7 @@ public class CustomSeekBarPreference extends Preference implements SeekBar.OnSee
             mStatusText.setText(mDefaultText);
         } else {
             mStatusText.setText(String.valueOf(mCurrentValue) + mUnits);
-        } 
+        }
         mSeekBar.setProgress(mCurrentValue - mMin);
         mTitle = (TextView) view.findViewById(android.R.id.title);
 
@@ -216,6 +219,16 @@ public class CustomSeekBarPreference extends Preference implements SeekBar.OnSee
             }
             persistInt(temp);
             mCurrentValue = temp;
+        }
+    }
+
+    public void setDefaultValue(int value) {
+        mDefaultValue = value;
+        if (mDefaultValue > mMax) {
+            mDefaultValue = mMax;
+        }
+        if (mCurrentValue == mDefaultValue) {
+            mStatusText.setText(mDefaultText);
         }
     }
 
