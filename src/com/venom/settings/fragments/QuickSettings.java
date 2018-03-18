@@ -20,6 +20,7 @@ import android.content.Context;
 import android.content.ContentResolver;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
@@ -37,15 +38,27 @@ import com.android.internal.logging.nano.MetricsProto;
 
 import com.venom.settings.R;
 
+import com.venom.settings.preferences.CustomSeekBarPreference;
+
 public class QuickSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
-     @Override
+    private static final String OMNI_QS_PANEL_BG_ALPHA = "qs_panel_bg_alpha";
+
+    private CustomSeekBarPreference mQsPanelAlpha;
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.venom_settings_quicksettings);
         ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mQsPanelAlpha = (CustomSeekBarPreference) findPreference(OMNI_QS_PANEL_BG_ALPHA);
+        int qsPanelAlpha = Settings.System.getIntForUser(resolver,
+                Settings.System.OMNI_QS_PANEL_BG_ALPHA, 255, UserHandle.USER_CURRENT);
+        mQsPanelAlpha.setValue(qsPanelAlpha);
+        mQsPanelAlpha.setOnPreferenceChangeListener(this);
     }
 
      @Override
@@ -63,7 +76,18 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         super.onPause();
     }
 
+<<<<<<< HEAD:src/com/venom/settings/fragments/QuickSettings.java
      public boolean onPreferenceChange(Preference preference, Object newValue) {
+=======
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mQsPanelAlpha) {
+            int bgAlpha = (Integer) newValue;
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.OMNI_QS_PANEL_BG_ALPHA, bgAlpha,
+                    UserHandle.USER_CURRENT);
+            return true;
+        }
+>>>>>>> abebc3e... Quick settings: Set transparency [2/2]:src/com/superior/settings/fragments/QuickSettings.java
         return false;
     }
 }
