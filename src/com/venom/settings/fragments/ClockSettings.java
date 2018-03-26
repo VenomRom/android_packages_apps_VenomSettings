@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The Superior OS Project
+ * Copyright (C) 2018 VenomRom Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.superior.settings.fragments;
+package com.venom.settings.fragments;
 
 import android.app.AlertDialog;
 import android.content.ContentResolver;
@@ -41,9 +41,9 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 
-import com.superior.settings.preferences.SystemSettingSwitchPreference;
-import com.superior.settings.preferences.SystemSettingSwitchPreference;
-import com.superior.settings.preferences.CustomSeekBarPreference;
+import com.venom.settings.preferences.SystemSettingSwitchPreference;
+import com.venom.settings.preferences.SystemSettingSwitchPreference;
+import com.venom.settings.preferences.CustomSeekBarPreference;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 import com.android.internal.logging.nano.MetricsProto;
 
@@ -173,7 +173,7 @@ public class ClockSettings extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.SUPERIOR;
+        return MetricsProto.MetricsEvent.VENOM;
     }
 
     @Override
@@ -329,5 +329,4 @@ public class ClockSettings extends SettingsPreferenceFragment implements
         mClockDateFormat.setEntries(parsedDateEntries);
     }
 }
-
 

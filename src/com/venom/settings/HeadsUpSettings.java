@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.superior.settings;
+package com.venom.settings;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -40,8 +40,8 @@ import android.widget.ListView;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.superior.settings.preferences.PackageListAdapter;
-import com.superior.settings.preferences.PackageListAdapter.PackageItem;
+import com.venom.settings.preferences.PackageListAdapter;
+import com.venom.settings.preferences.PackageListAdapter.PackageItem;
 import android.provider.Settings;
 
 import java.util.ArrayList;
@@ -163,13 +163,13 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.SUPERIOR;
+        return MetricsProto.MetricsEvent.VENOM;
     }
 
     @Override
     public int getDialogMetricsCategory(int dialogId) {
         if (dialogId == DIALOG_STOPLIST_APPS || dialogId == DIALOG_BLACKLIST_APPS ) {
-            return MetricsProto.MetricsEvent.SUPERIOR;
+            return MetricsProto.MetricsEvent.VENOM;
         }
         return 0;
     }

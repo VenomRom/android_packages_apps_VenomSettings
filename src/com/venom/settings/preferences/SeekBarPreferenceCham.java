@@ -1,4 +1,4 @@
-package com.superior.settings.preferences;
+package com.venom.settings.preferences;
 
 import android.content.Context;
 import android.content.res.TypedArray;

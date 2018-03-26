@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.superior.settings.fragments;
+package com.venom.settings.fragments;
 
 import android.app.ActivityManagerNative;
 import android.content.Context;
@@ -46,8 +46,8 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.Utils;
 
-import com.superior.settings.preferences.CustomSeekBarPreference;
-import com.superior.settings.preferences.SystemSettingSwitchPreference;
+import com.venom.settings.preferences.CustomSeekBarPreference;
+import com.venom.settings.preferences.SystemSettingSwitchPreference;
 
 public class Traffic extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
@@ -90,7 +90,7 @@ public class Traffic extends SettingsPreferenceFragment implements OnPreferenceC
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.SUPERIOR;
+        return MetricsProto.MetricsEvent.VENOM;
     }
 
     @Override
@@ -127,4 +127,3 @@ public class Traffic extends SettingsPreferenceFragment implements OnPreferenceC
         return false;
     }
 }
-

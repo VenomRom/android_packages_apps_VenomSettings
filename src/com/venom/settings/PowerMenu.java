@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.superior.settings;
+package com.venom.settings;
 
 import android.content.Context;
 import android.content.ContentResolver;
@@ -43,14 +43,14 @@ public class PowerMenu extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.superior_settings_powermenu);
+        addPreferencesFromResource(R.xml.venom_settings_powermenu);
 
         ContentResolver resolver = getActivity().getContentResolver();
     }
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.SUPERIOR;
+        return MetricsProto.MetricsEvent.VENOM;
     }
 
     @Override
