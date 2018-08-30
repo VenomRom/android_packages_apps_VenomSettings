@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.superior.settings.fragments;
+package com.venom.settings.fragments;
 
 import android.content.ContentResolver;
 import android.os.Bundle;
@@ -68,7 +68,7 @@ public class StatusBarBattery extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsEvent.SUPERIOR;
+        return MetricsEvent.VENOM;
     }
 
     @Override
