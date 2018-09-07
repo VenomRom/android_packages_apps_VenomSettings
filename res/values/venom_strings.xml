@@ -301,5 +301,13 @@
     <string name="seekbar_default_value_set">Value set to default of <xliff:g id="number">%d</xliff:g></string>
     <string name="seekbar_default_value_already_set">Default value is already set</string>
     <string name="seekbar_default_string">Default</string>
+	
+	<!-- Battery percentage -->
+    <string name="battery_style_category_title">Battery Styles</string>
+    <string name="battery_style_category_summary">Customize Battery Icon</string>
+    <string name="status_bar_battery_percentage_title">Battery percentage</string>
+    <string name="status_bar_battery_percentage_default">Hidden</string>
+    <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
+    <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
 
 </resources>
