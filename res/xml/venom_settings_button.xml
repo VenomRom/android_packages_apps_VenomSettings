@@ -30,6 +30,7 @@
             android:title="@string/anbi_title"
             android:summary="@string/anbi_summary"
             android:defaultValue="false" />
+			
      </PreferenceCategory>
      <PreferenceCategory
         android:key="back_key"
@@ -171,7 +172,5 @@
         android:title="@string/allow_incall_home_title"
         android:summary="@string/allow_incall_home_summary"
         android:defaultValue="true" />
-		
-		
 
 </PreferenceScreen>
