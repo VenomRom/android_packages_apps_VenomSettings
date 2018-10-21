@@ -42,6 +42,16 @@
         android:persistent="false" />
 
     <com.venom.settings.preferences.SecureSettingSwitchPreference
+	<ListPreference
+        android:key="lock_date_fonts"
+        android:title="@string/lock_date_font_title"
+        android:dialogTitle="@string/lock_date_font_dialog_title"
+        android:entries="@array/lock_clock_fonts_entries"
+        android:entryValues="@array/lock_clock_fonts_values"
+        android:summary="@string/lock_date_font_summary"
+        android:persistent="false" />
+
+    <com.venom.settings.preferences.SecureSettingSwitchPreference
         android:key="fingerprint_success_vib"
         android:title="@string/fprint_sucess_vib_title"
         android:summary="@string/fprint_sucess_vib_summary"
