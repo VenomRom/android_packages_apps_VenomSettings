@@ -1,5 +1,5 @@
 /*
- * Copyright © 2018 Superior OS Project
+ * Copyright © 2018 VenomRom Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.superior.settings;
+package com.venom.settings;
 
 import android.os.Bundle;
 import android.support.v7.preference.Preference;
@@ -26,16 +26,16 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import com.android.internal.logging.nano.MetricsProto;
 
-public class SuperiorSettings extends SettingsPreferenceFragment {
+public class VenomSettings extends SettingsPreferenceFragment {
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.superior_settings);
+        addPreferencesFromResource(R.xml.venom_settings);
     }
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.SUPERIOR;
+        return MetricsProto.MetricsEvent.VENOM;
     }
 }
