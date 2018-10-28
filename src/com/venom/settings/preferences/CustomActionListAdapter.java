@@ -16,7 +16,7 @@
  * Adapter for displaying custom actions in a list
  */
 
-package com.superior.settings.preferences;
+package com.venom.settings.preferences;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -121,5 +121,4 @@ public class CustomActionListAdapter extends BaseAdapter {
         ImageView icon;
     }
 }
-
 

@@ -18,7 +18,7 @@
  * key is identical to the target ConfigMap tag in ActionConstants 
  */
 
-package com.superior.settings.preferences;
+package com.venom.settings.preferences;
 
 import java.util.Map;
 
@@ -132,5 +132,3 @@ public class ActionPreference extends Preference implements ActionHolder {
         mDefaultAction = action;
     }
 }
-
-

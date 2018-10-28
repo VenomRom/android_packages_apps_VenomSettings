@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.superior.settings.preferences;
+package com.venom.settings.preferences;
 
 import java.net.URISyntaxException;
 import java.util.ArrayList;
@@ -41,7 +41,7 @@ import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 import com.android.settings.R;
-import com.superior.settings.preferences.ShortcutPickHelper.AppExpandableAdapter.GroupInfo;
+import com.venom.settings.preferences.ShortcutPickHelper.AppExpandableAdapter.GroupInfo;
 
 public class ShortcutPickHelper {
 
@@ -325,5 +325,3 @@ public class ShortcutPickHelper {
         return uri;
     }
 }
-
-

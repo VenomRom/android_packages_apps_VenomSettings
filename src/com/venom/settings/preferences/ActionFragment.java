@@ -17,21 +17,18 @@
  * class that holds target widget state
  */
 
-package com.superior.settings.preferences;
+package com.venom.settings.preferences;
 
 import java.util.ArrayList;
-
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.hwkeys.ActionConstants.Defaults;
 import com.android.internal.util.hwkeys.ActionHandler;
 import com.android.internal.util.hwkeys.Config;
 import com.android.internal.util.hwkeys.Config.ActionConfig;
 import com.android.internal.util.hwkeys.Config.ButtonConfig;
-
-import com.superior.settings.preferences.ShortcutPickHelper;
-import com.superior.settings.preferences.ActionPreference;
-import com.superior.settings.preferences.CustomActionListAdapter;
-
+import com.venom.settings.preferences.ShortcutPickHelper;
+import com.venom.settings.preferences.ActionPreference;
+import com.venom.settings.preferences.CustomActionListAdapter;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -40,8 +37,8 @@ import android.os.Bundle;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
-
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
@@ -51,7 +48,6 @@ public class ActionFragment extends SettingsPreferenceFragment implements
     private static final int DIALOG_CATEGORY = 69;
     private static final int DIALOG_CUSTOM_ACTIONS = 70;
     private static final String KEY_FOCUSED_PREFERENCE = "key_focused_preference";
-
     private ShortcutPickHelper mPicker;
     protected ArrayList<ActionPreference> mPrefHolder;
     private String mHolderTag;
@@ -165,27 +161,23 @@ public class ActionFragment extends SettingsPreferenceFragment implements
         switch (dialogId) {
             case DIALOG_CATEGORY:
             case DIALOG_CUSTOM_ACTIONS:
-                return MetricsEvent.SUPERIOR;
+                return MetricsEvent.VENOM;
             default:
                 return 0;
         }
     }
-
-    // subclass overrides to include back and home actions
+     // subclass overrides to include back and home actions
     protected boolean usesExtendedActionsList() {
         return false;
     }
-
-    protected void onActionPolicyEnforced(ArrayList<ActionPreference> prefs) {
+     protected void onActionPolicyEnforced(ArrayList<ActionPreference> prefs) {
     }
-
-    protected void setActionPreferencesEnabled(boolean enabled) {
+     protected void setActionPreferencesEnabled(boolean enabled) {
         for (ActionPreference pref : mPrefHolder) {
             pref.setEnabled(enabled);
         }
     }
-
-    /**
+     /**
      * load our button lists and ActionPreferences map button action targets from preference keys
      * and defaults config maps subclass is required to set desired Defaults interface int
      * ActionContants
@@ -209,8 +201,7 @@ public class ActionFragment extends SettingsPreferenceFragment implements
         }
         loadAndSetConfigs();
     }
-
-    protected void loadAndSetConfigs() {
+     protected void loadAndSetConfigs() {
         mButtons = Config.getConfig(getActivity(), mDefaults);
         mDefaultButtons = Config.getDefaultConfig(getActivity(), mDefaults);
         for (ActionPreference pref : mPrefHolder) {
@@ -223,8 +214,7 @@ public class ActionFragment extends SettingsPreferenceFragment implements
             pref.setDefaultActionConfig(defAction);
         }
     }
-
-    private void onTargetChange(String uri) {
+     private void onTargetChange(String uri) {
         if (uri == null) {
             return;
         } else if (uri.equals(getString(R.string.action_value_default_action))) {
@@ -235,8 +225,7 @@ public class ActionFragment extends SettingsPreferenceFragment implements
             showDialog(DIALOG_CUSTOM_ACTIONS);
         }
     }
-
-    protected void findAndUpdatePreference(ActionConfig action, String tag) {
+     protected void findAndUpdatePreference(ActionConfig action, String tag) {
         for (ActionPreference pref : mPrefHolder) {
             if (pref.getTag().equals(mHolderTag)) {
                 if (action == null) {
@@ -256,8 +245,7 @@ public class ActionFragment extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.SUPERIOR;
+        return MetricsProto.MetricsEvent.VENOM;
     }
 }
-
 
