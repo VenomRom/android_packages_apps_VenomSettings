@@ -1,3 +1,4 @@
+
 /*
  * Copyright (C) 2016 The Dirty Unicorns Project
  *
@@ -14,7 +15,7 @@
  * limitations under the License
  */
 
-package com.superior.settings.preferences;
+package com.venom.settings.preferences;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -59,7 +60,6 @@ public class CustomSeekBarPreference extends Preference implements SeekBar.OnSee
         if (id > 0) {
             mUnits = context.getResources().getString(id);
         }
-
         try {
             String newInterval = attrs.getAttributeValue(SETTINGS_NS, "interval");
             if (newInterval != null)
@@ -92,8 +92,7 @@ public class CustomSeekBarPreference extends Preference implements SeekBar.OnSee
         String value = attrs.getAttributeValue(namespace, name);
         if (value == null)
             value = defaultValue;
-
-        return value;
+         return value;
     }
 
     @Override
@@ -116,8 +115,7 @@ public class CustomSeekBarPreference extends Preference implements SeekBar.OnSee
             // move our seekbar to the new view we've been given
             ViewParent oldContainer = mSeekBar.getParent();
             ViewGroup newContainer = (ViewGroup) view.findViewById(R.id.seekBarPrefBarContainer);
-
-            if (oldContainer != newContainer) {
+             if (oldContainer != newContainer) {
                 // remove the seekbar from the old view
                 if (oldContainer != null) {
                     ((ViewGroup) oldContainer).removeView(mSeekBar);
@@ -162,8 +160,7 @@ public class CustomSeekBarPreference extends Preference implements SeekBar.OnSee
             newValue = mMin;
         else if (mInterval != 1 && newValue % mInterval != 0)
             newValue = Math.round(((float) newValue) / mInterval) * mInterval;
-
-        // change rejected, revert to the previous value
+         // change rejected, revert to the previous value
         if (!callChangeListener(newValue)) {
             seekBar.setProgress(mCurrentValue - mMin);
             return;
