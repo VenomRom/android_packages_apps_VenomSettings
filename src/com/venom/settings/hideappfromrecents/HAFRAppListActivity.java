@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The Superior OS Project
+ * Copyright (C) 2018 Venomrom Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
  
- package com.superior.settings.hideappfromrecents;
+package com.venom.settings.hideappfromrecents;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,7 +23,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 
-import com.superior.settings.hideappfromrecents.HAFRAppChooserAdapter.AppItem;
+import com.venom.settings.hideappfromrecents.HAFRAppChooserAdapter.AppItem;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
