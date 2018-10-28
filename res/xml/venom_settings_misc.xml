@@ -16,13 +16,13 @@
     android:title="@string/misc_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 	
-	    <com.superior.settings.preferences.SystemSettingSwitchPreference 
+	    <com.venom.settings.preferences.SystemSettingSwitchPreference 
             android:key="three_finger_gesture" 
             android:title="@string/three_finger_gesture" 
             android:summary="@string/three_finger_gesture_summary" 
             android:defaultValue="false" /> 
 			
-	    <com.superior.settings.preferences.SystemSettingListPreference
+	    <com.venom.settings.preferences.SystemSettingListPreference
             android:key="screenshot_type"
             android:entries="@array/screenshot_type_entries"
             android:entryValues="@array/screenshot_type_values"

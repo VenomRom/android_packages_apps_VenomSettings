@@ -22,7 +22,7 @@
         android:summary="@string/hide_apps_from_recents_summary" >
              <intent android:action="android.intent.action.MAIN"
                  android:targetPackage="com.android.settings"
-                 android:targetClass="com.superior.settings.hideappfromrecents.HAFRAppListActivity" />
+                 android:targetClass="com.venom.settings.hideappfromrecents.HAFRAppListActivity" />
     </Preference>
 
 </PreferenceScreen>

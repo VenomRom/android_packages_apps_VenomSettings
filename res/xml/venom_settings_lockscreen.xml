@@ -26,7 +26,7 @@
                 android:targetClass="com.android.systemui.tuner.LockscreenActivity" />
     </Preference>
 
-    <com.superior.settings.preferences.SystemSettingSwitchPreference
+    <com.venom.settings.preferences.SystemSettingSwitchPreference
         android:key="lockscreen_battery_info"
         android:title="@string/lockscreen_battery_info_title"
         android:summary="@string/lockscreen_battery_info_summary"
@@ -41,19 +41,19 @@
         android:summary="@string/lock_clock_font_summary"
         android:persistent="false" />
 
-    <SwitchPreference
+    <com.venom.settings.preferences.SecureSettingSwitchPreference
         android:key="fingerprint_success_vib"
         android:title="@string/fprint_sucess_vib_title"
         android:summary="@string/fprint_sucess_vib_summary"
         android:persistent="false" />
 
-    <com.superior.settings.preferences.SecureSettingSwitchPreference
+    <com.venom.settings.preferences.SecureSettingSwitchPreference
         android:key="face_auto_unlock"
         android:title="@string/face_auto_unlock_title"
         android:summary="@string/face_auto_unlock_summary"
         android:defaultValue="false" />
 
-    <com.superior.settings.preferences.SystemSettingSwitchPreference
+    <com.venom.settings.preferences.SystemSettingSwitchPreference
             android:key="double_tap_sleep_lockscreen"
             android:title="@string/double_tap_to_sleep_lockscreen_title"
             android:summary="@string/double_tap_to_sleep_lockscreen_summary"

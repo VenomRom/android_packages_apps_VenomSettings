@@ -27,26 +27,26 @@
             android:key="clock_settings"
             android:title="@string/clock_style_category_title"
             android:summary="@string/clock_style_category_summary"
-            android:fragment="com.superior.settings.fragments.ClockSettings" />
+            android:fragment="com.venom.settings.fragments.ClockSettings" />
 		 
 	    <Preference
             android:key="battery_settings"
             android:title="@string/battery_style_category_title"
             android:summary="@string/battery_style_category_summary"
-            android:fragment="com.superior.settings.fragments.StatusBarBattery" />
+            android:fragment="com.venom.settings.fragments.StatusBarBattery" />
 		 
 		 <Preference
             android:title="@string/traffic_title"
             android:key="traffic"
-            android:fragment="com.superior.settings.fragments.Traffic" />
+            android:fragment="com.venom.settings.fragments.Traffic" />
 
-        <com.superior.settings.preferences.SystemSettingSwitchPreference
+        <com.venom.settings.preferences.SystemSettingSwitchPreference
             android:key="double_tap_sleep_gesture"
             android:title="@string/double_tap_to_sleep_statusbar_title"
             android:summary="@string/double_tap_to_sleep_statusbar_summary"
             android:defaultValue="true" />
 			
-        <com.superior.settings.preferences.SystemSettingSwitchPreference
+        <com.venom.settings.preferences.SystemSettingSwitchPreference
          android:key="show_fourg_icon"
          android:title="@string/show_fourg_icon_title"
          android:summary="@string/show_fourg_icon_summary"
